@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUTTERFLY-SONG-AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="auth.js"></script>
+    <script defer src="script.js"></script>
+    <script defer src="download.js"></script>
+    <script defer src="pricing.js"></script>
+    <script defer src="share.js"></script>
+</head>
+<body>
+    <header>
+        <h1>BUTTERFLY-SONG-AI</h1>
+        <nav>
+            <button onclick="showLogin()">Connexion</button>
+            <button onclick="showRegister()">Inscription</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="song-generator">
+            <h2>Générez une chanson à partir de votre texte</h2>
+            <textarea id="song-input" placeholder="Écrivez votre texte ici..."></textarea>
+            <button onclick="generateSong()">Générer</button>
+            <div id="song-output"></div>
+            <button id="download-song" onclick="downloadSong()">Télécharger</button>
+        </section>
+
+        <section id="pricing">
+            <h2>Plans d'abonnement</h2>
+            <button onclick="subscribe('pro')">Pro - 1.5$/mois (100 chansons/jour)</button>
+            <button onclick="subscribe('premium')">Premium - 2$/mois (Illimité)</button>
+        </section>
+
+        <section id="share">
+            <h2>Partagez pour gagner des crédits</h2>
+            <button onclick="shareSong()">Partager</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>©Inconnu boy - BUTTERFLY-SONG-AI</p>
+    </footer>
+</body>
+</html>
